@@ -49,43 +49,25 @@
 
 ---
 
-### **3. Usage Examples**
+### **3. Laravel Interface**
 
-#### **register() - Example**
-```php
-$this->app->bind('App\Services\ExampleService', function () {
-    return new ExampleService();
-});
+#### **What is an Interface?**
+An **Interface** in Laravel defines a **contract** specifying the methods a class must implement. It only declares method signatures, not implementations.
 
-$this->app->singleton('App\Services\SingletonService', function () {
-    return new SingletonService();
-});
-```
+---
 
-#### **boot() - Example**
-```php
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\View;
-
-public function boot()
-{
-    // Database Query
-    $users = DB::table('users')->get();
-
-    // View Sharing
-    View::share('users', $users);
-
-    // Configuration Updates
-    Config::set('app.timezone', 'Asia/Colombo');
-}
-```
+### **Why Use Interfaces?**
+1. **Enforces Rules:** Ensures that implementing classes follow a specific structure.
+2. **Loose Coupling:** Allows switching implementations without changing dependent code.
+3. **Dependency Injection:** Supports resolving dependencies dynamically via Laravel's **service container**.
+4. **Testability:** Makes it easier to mock dependencies in unit tests.
 
 ---
 
 ### **4. Key Takeaways**
 - Use **`register()`** for **binding services** and **dependencies**.
 - Use **`boot()`** for tasks that depend on **fully initialized services**, like **database queries**, **caching**, **sessions**, and **routes**.
-- If something fails in **`register()`**, try moving it to **`boot()`**.
+- Implement **interfaces** for **flexibility, scalability**, and **testability** in Laravel projects.
 
 ---
 
@@ -93,8 +75,4 @@ public function boot()
 1. **Avoid Performance Bottlenecks** - Move frequently accessed data (e.g., settings) to **caches** instead of database queries.
 2. **Testing Compatibility** - Always check dependencies for availability when registering services.
 3. **Configuration Loading** - Load database-based configurations dynamically in the `boot()` method.
-
-
-### **Interface**
-
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // class Stadium{
@@ -74,4 +75,4 @@ Route::get('/', function () {
 Route::get('/test',TestController::class);//call involk method direct
 //Route::get('/test', [TestController::class, 'test']);//call controler function
 
-//Route::get('/test', TestController::class);
+Route::get('/user', [UserController::class,'getUserName']);
