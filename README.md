@@ -94,3 +94,7 @@ public function boot()
 2. **Testing Compatibility** - Always check dependencies for availability when registering services.
 3. **Configuration Loading** - Load database-based configurations dynamically in the `boot()` method.
 
+
+### **Interface**
+
+
