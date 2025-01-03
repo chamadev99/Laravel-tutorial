@@ -5,6 +5,7 @@ use App\Http\Controllers\EncapsulationController;
 use App\Http\Controllers\InheritsController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StaticController;
 use Illuminate\Support\Facades\Route;
 
 // class Stadium{
@@ -84,3 +85,4 @@ Route::get('/encapsulation', [EncapsulationController::class,'Encapsulation']);
 Route::get('/inherits', [InheritsController::class,'getUserName']);
 Route::get('/pholymorephisum', [PholymorphisumController::class,'Pholymorephysum']);
 Route::get('/abstraction', [AbstractionController::class,'abstraction']);
+Route::get('/static', [StaticController::class,'static']);
