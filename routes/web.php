@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\PholymorphisumController;
+use App\Http\Controllers\AbstractionController;
 use App\Http\Controllers\EncapsulationController;
 use App\Http\Controllers\InheritsController;
 use App\Http\Controllers\TestController;
@@ -82,3 +83,4 @@ Route::get('/user', [UserController::class,'getUserName']);
 Route::get('/encapsulation', [EncapsulationController::class,'Encapsulation']);
 Route::get('/inherits', [InheritsController::class,'getUserName']);
 Route::get('/pholymorephisum', [PholymorphisumController::class,'Pholymorephysum']);
+Route::get('/abstraction', [AbstractionController::class,'abstraction']);
