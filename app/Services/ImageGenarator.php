@@ -21,7 +21,7 @@ class ImageGenarator
     {
       
         //return $this->aiService->generateImage($prompt);
-        return $this->aiService->generatText($prompt);
+        return $this->aiService->generateImage($prompt);
 
     }
 }

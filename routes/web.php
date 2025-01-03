@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EncapsulationController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -76,3 +77,5 @@ Route::get('/test',TestController::class);//call involk method direct
 //Route::get('/test', [TestController::class, 'test']);//call controler function
 
 Route::get('/user', [UserController::class,'getUserName']);
+
+Route::get('/encapsulation', [EncapsulationController::class,'Encapsulation']);

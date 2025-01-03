@@ -15,13 +15,13 @@ class AiService
     public function generateImage(string $prompt):string
     {
       
-      return "text : $prompt . $this->apiKey" ;
+      return "image : $prompt . $this->apiKey" ;
     }
 
     public function generatText(string $prompt):string
     {   
 
-        return "blog text : $prompt" ;
+        return "blog text : $prompt . $this->apiKey" ;
        
     }
 }

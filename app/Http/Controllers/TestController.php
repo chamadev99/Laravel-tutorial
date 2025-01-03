@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\AiService;
 use App\Services\ImageGenarator;
+use App\Services\BlogPostGeneratoer;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -46,10 +47,16 @@ class TestController extends Controller
     // }
 
     //simplified invlike
-    public function __invoke(ImageGenarator $imageGenarator)
+    // public function __invoke(ImageGenarator $imageGenarator)
+    // {
+    //     echo "invoke 2";
+    //     return $imageGenarator->generate("hi tis blog");
+    // }
+
+    public function __invoke(BlogPostGeneratoer $blog)
     {
         echo "invoke 2";
-        return $imageGenarator->generate("hi");
+        return $blog->generate("hi");
     }
 
   

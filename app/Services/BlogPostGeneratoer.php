@@ -2,7 +2,7 @@
 namespace App\Services;
 use App\Services\AiService;
 use GuzzleHttp\Client;
-class ImageGenarator
+class BlogPostGeneratoer
 {
 
     public function __construct(private AiService $aiService)

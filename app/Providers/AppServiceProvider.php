@@ -6,6 +6,7 @@ use App\Class\User;
 use App\Interface\UserInterface;
 use App\Services\AiService;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,11 +16,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {   //echo "service provider 1";
-        $this->app->bind(AiService::class,function(){
-            return new AiService(new Client(),"key1233");
-        });
+        // $this->app->bind(AiService::class,function(){
+        //     return new AiService(new Client(),"key1233");
+        // });
 
-        $this->app->bind(UserInterface::class,User::class);
+        // $this->app->bind(UserInterface::class,User::class);
     }
 
     /**
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        
+        View::share('test_view',"chamath  view");
     }
 }

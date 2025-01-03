@@ -76,3 +76,20 @@ An **Interface** in Laravel defines a **contract** specifying the methods a clas
 2. **Testing Compatibility** - Always check dependencies for availability when registering services.
 3. **Configuration Loading** - Load database-based configurations dynamically in the `boot()` method.
 
+
+# Encapsulation in OOP
+
+## What is Encapsulation?
+Encapsulation is one of the **core principles** of Object-Oriented Programming (OOP). It is the process of **hiding the internal details** of an object and only exposing the necessary parts through methods. 
+
+## Key Concepts:
+- **Private Data**: Internal data of an object is hidden and cannot be accessed directly from outside the object.
+- **Public Methods**: Specific methods are provided to access and modify the hidden data safely.
+- **Control Access**: It ensures data integrity by restricting unauthorized access and modification.
+
+## Benefits of Encapsulation:
+1. **Security** - Sensitive data is protected from accidental modification.
+2. **Data Hiding** - Internal implementation details are hidden, reducing complexity.
+3. **Flexibility** - Code can be modified internally without affecting external code.
+4. **Reusability** - Encapsulated code is easier to reuse in different contexts.
+
