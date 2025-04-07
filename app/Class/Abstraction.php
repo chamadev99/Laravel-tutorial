@@ -1,20 +1,21 @@
 <?php
+
 namespace App\Class;
 
-abstract class Abstraction{
+abstract class Abstraction
+{
+    private $name = "chamath";
+
+
     abstract public function MakeSound();
 
-    public function sleep(){
-       return "sleep";
+    protected function getName()
+    {
+        return $this->name;
+    }
+
+    public function sleep()
+    {
+        return " then sleep";
     }
 }
-
-
-
-
-
- 
-
-
-
-

@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use App\Repositories\OrderRepositoryInterface;
+use App\Repositories\OrderRepository;
+use App\Models\Sanctum\PersonalAccessToken;
+use Laravel\Sanctum\Sanctum;
+
 use App\Class\User;
 use App\Interface\UserInterface;
 use App\Services\AiService;
@@ -21,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
         // });
 
         // $this->app->bind(UserInterface::class,User::class);
+
+        $this->app->bind(OrderRepositoryInterface::class, OrderRepository::class);
     }
 
     /**
@@ -28,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        
-        View::share('test_view',"chamath  view");
+        // Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
+        View::share('test_view', "chamath  view");
     }
 }
