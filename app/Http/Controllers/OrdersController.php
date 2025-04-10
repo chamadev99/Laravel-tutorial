@@ -17,7 +17,8 @@ class OrdersController extends Controller
 
     public function index()
     {
-        return response()->json($this->orderService->listOrders());
+        $test = app(OrderService::class);
+        return response()->json($test->test());
     }
 
     public function show($id)

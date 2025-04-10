@@ -8,7 +8,17 @@ class OrderRepository implements OrderRepositoryInterface
 {
     public function all()
     {
-        return Order::all();
+        return "all";
+    }
+
+    public function test()
+    {
+        return 5;
+    }
+
+    public function newMethod()
+    {
+        return 10;
     }
 
     public function find($id)

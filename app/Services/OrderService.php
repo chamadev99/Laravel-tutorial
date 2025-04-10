@@ -2,13 +2,14 @@
 
 namespace App\Services;
 
+use App\Repositories\OrderRepository;
 use App\Repositories\OrderRepositoryInterface;
 
 class OrderService
 {
     protected $orderRepo;
 
-    public function __construct(OrderRepositoryInterface $orderRepo)
+    public function __construct(OrderRepository $orderRepo)
     {
         $this->orderRepo = $orderRepo;
     }
@@ -16,6 +17,23 @@ class OrderService
     public function listOrders()
     {
         return $this->orderRepo->all();
+    }
+
+    public function newMethod()
+    {
+        return "new";
+    }
+
+    public function test()
+    {
+
+        $varOne = $this->orderRepo->test();
+        $varTwo = 5;
+        // echo "sdsd", "sdsds" . "sdsds";
+        //print($varOne , 'dfdfd');
+
+
+        return $varOne;
     }
 
     public function getOrder($id)

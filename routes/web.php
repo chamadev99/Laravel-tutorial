@@ -3,6 +3,7 @@
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\PracticalCntroller;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,6 +22,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/exam1', [ExamController::class, 'index'])->name('exam');
 Route::get('/practical', [PracticalCntroller::class, 'index'])->name('practical');
+Route::get('/order', [OrdersController::class, 'index'])->name('practical');
 
 
 
